@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="park">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <script href="bower_components/angular/angular.min.js"></script>
-        <title>Cadastro de Carros</title>
+        <link rel="stylesheet" href="app/css/app.css">
+        <title>Parking Estacionamento</title>
     </head>
 
     <body>
-        <div class="container">
-            <div class="jumbotron">
-
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 conteudo">
+            <nav class="navbar navbar-primary navbar-top bg-primary">
+                <div class="container">
+                    <h1 class="navbar-text">Estacionamento</h1>
+                </div>
+            </nav>
+            <div class="base">
+                <div ng-view></div>
             </div>
         </div>
+
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="app/route.js"></script>
+        <script src="app/controllers/lista-controller.js"></script>
+        <script src="app/controllers/form-controller.js"></script>
+        <script src="app/controllers/saida-controller.js"></script>
+        <script src="app/directives/item-carro.js"></script>
+        <script src="app/directives/detalhe-carro.js"></script>
+        <script src="app/services/carros-service.js"></script>
     </body>
 </html>

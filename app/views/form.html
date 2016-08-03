@@ -1,0 +1,31 @@
+<h2>Entrada de Veículo</h2>
+<form ng-submit="add(carro)" name="form">
+    <input type="text"
+                class="form-control"
+                placeholder=" Placa Ex : PLT-0000"
+                ng-model="carro.placa"
+                ng-pattern="/^\D{3}-\d{4}$/"
+                name="placa"
+                required/>
+    <div class="alert alert-warning" ng-show="form.placa.$error.required" >Campo Placa obrigatório</div>
+    <div class="alert alert-danger" ng-show="form.placa.$error.pattern" >Ex válido de placa ABC-1234</div>
+    <select class="form-control" name="marca" ng-model="carro.marca" required>
+        <option ng-repeat="marca in marcas" value="{{marca}}">{{marca}}</option>
+    </select>
+    <div class="alert alert-warning" ng-show="form.marca.$error.required" >Campo Marca obrigatório</div>
+    <input type="text"
+                class="form-control"
+                placeholder="Modelo"
+                ng-model="carro.modelo"
+                name="modelo"
+                required/>
+    <div class="alert alert-warning" ng-show="form.modelo.$error.required" >Campo Modelo obrigatório</div>
+    <input type="text"
+                class="form-control"
+                placeholder="Cor"
+                ng-model="carro.cor"
+                name="cor"
+                required/>
+    <div class="alert alert-warning" ng-show="form.cor.$error.required" >Campo Cor obrigatório</div>
+    <input type="submit"  class="btn btn-primary btn-block" value="Enviar" ng-disabled="form.$invalid"/>
+</form>

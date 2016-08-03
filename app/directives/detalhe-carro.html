@@ -1,0 +1,30 @@
+<div class="jumbotdon">
+<h2>Placa {{carro.placa | uppercase}}</h2>
+<table class="table">
+    <tr>
+        <td>{{carro.marca}}</td>
+        <td>{{carro.modelo}}</td>
+    </tr>
+    <tr>
+        <td>Cor</td>
+        <td>{{carro.cor}}</td>
+    </tr>
+    <tr>
+        <td>Entdada</td>
+        <td>{{carro.data | date : "HH:mm dd/MM"}}</td>
+    </tr>
+    <tr>
+        <td>Saída</td>
+        <td>{{carro.saida | date : "HH:mm dd/MM"}}</td>
+    </tr>
+    <tr>
+        <td>Total</td>
+        <td><i>{{carro.total}}</i> minutos</td>
+    </tr>
+    <tr>
+        <td><a href="#/" class="btn btn-default">Voltar</td>
+        <td><button class="btn btn-primary btn-block" ng-click="confirmarSaida()">Confirmar sáida</button></td>
+    </tr>
+</table>
+
+</div>

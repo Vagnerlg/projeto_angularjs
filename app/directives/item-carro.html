@@ -1,0 +1,29 @@
+<div class="thumbnail">
+    <div class="caption">
+        <div class="row">
+            <div class=" col-xs-7">
+                <p class="descricao">Placa</p>
+                <p class="titulos">{{carro.placa | uppercase}}</p>
+            </div>
+            <div class=" col-xs-5">
+                <p class="descricao">Entrada</p>
+                <p class="titulos">{{carro.data | date : "HH:mm"}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-xs-7">
+                <p class="descricao">{{carro.marca}}</p>
+                <p class="titulos"> {{carro.modelo}}</p>
+            </div>
+            <div class=" col-xs-5">
+            <p class="descricao">Cor</p>
+                <p class="titulos">{{carro.cor}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-4 col-xs-8">
+                <a href="#/saida/{{carro.data}}" class="btn btn-default btn-block">Detalhes e saída de veículo</a>
+            </div>
+        </div>
+    </div>
+</div>

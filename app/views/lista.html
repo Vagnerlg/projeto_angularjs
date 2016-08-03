@@ -1,0 +1,8 @@
+<input type="text" ng-model="filtro" class="form-control" placeholder="Buscar">
+<a href="#/form" class="btn btn-primary btn-block">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    add Veículos
+</a>
+<h3 class="text-primary">Veículos estacionados</h3>
+
+<item-carro ng-repeat="carro in carros | filter: filtro  | orderBy:'-data'""></item-carro>
